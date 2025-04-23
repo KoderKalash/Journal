@@ -62,9 +62,9 @@ const Landing = () => {
         <div className='max-w-5xl mx-auto px-6'>
           <h2 className='font-bold text-2xl md:text-4xl text-[var(--secondary-color)] mb-4'>Try our templates.</h2>
           <div className='grid md:grid-cols-3 gap-8'>
-            <Link to="/journal"><TempCard
+            <Link to="/myjournal"><TempCard
               icon="🗒️"
-              title="Journal"
+              title="My Journal"
               desc="A place for you and all your ideas in one place." /></Link>
 
             <Link to="/todo"><TempCard
