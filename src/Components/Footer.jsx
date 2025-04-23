@@ -1,4 +1,5 @@
 import React from 'react'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 
@@ -19,7 +20,7 @@ const Footer = () => {
                         <Link to="/f" className='p-1 hover:bg-[var(--shadow-color)] rounded-md'>fb</Link>
                         <Link to="/li" className='p-1 hover:bg-[var(--shadow-color)] rounded-md'>linkedin</Link>
                         <Link to="/x" className='p-1 hover:bg-[var(--shadow-color)] rounded-md'>x</Link>
-                        <Link to="/g" className='p-1 hover:bg-[var(--shadow-color)] rounded-md'>github</Link>
+                        <Link to="/g" className='p-1 hover:bg-[var(--shadow-color)] rounded-md'>gt</Link>
                     </div>
 
                     <div>
@@ -31,11 +32,72 @@ const Footer = () => {
                     </div>
 
                     <div className='text-[var(--paragraph-color)] text-xs'>
+                        <p></p>
                         <p>
                             &copy; {new Date().getFullYear()} Journal. All rights reserved.
                         </p>
                     </div>
 
+                </div>
+
+                <div>
+                    <h4 className='font-bold text-[var(--secondary-color)] mb-3'>Company</h4>
+                    <div className='space-y-2 flex flex-col text-dec'>
+                        <Link to="" className='
+                         text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2'>About us</Link>
+                        <Link to="" className='
+                         text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2'>Careers</Link>
+                        <Link to="" className='
+                         text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2'>Status</Link>
+                        <Link to="" className='
+                         text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2'>Terms & Privacy</Link>
+                    </div>
+                </div>
+                <div>
+                    <h4 className='font-bold text-[var(--secondary-color)] mb-3'>Download</h4>
+                    <div className='space-y-2 flex flex-col text-dec'>
+                        <Link to="" className='
+                    text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2 '>iOS & Android</Link>
+                        <Link to="" className='
+                    text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2 '>Mac & Windows</Link>
+                        <Link to="" className='
+                    text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2 '>Calendar</Link>
+                        <Link to="" className='
+                    text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2 '>Other Apps</Link>
+                    </div>
+                </div>
+                <div>
+                    <h4 className='font-bold text-[var(--secondary-color)] mb-3'>Resources</h4>
+
+                    <div className='space-y-2 flex flex-col text-dec'>
+                        <Link to="" className='
+                    text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2 '>Help Center</Link>
+                        <Link to="" className='
+                    text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2 '>Pricing</Link>
+                        <Link to="" className='
+                    text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2 '>Blog</Link>
+                        <Link to="" className='
+                    text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2 '>Community</Link>
+                        <Link to="" className='
+                    text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2 '>Templates</Link>
+                        <Link to="" className='
+                    text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2 '>Demo</Link>
+                    </div>
+
+                </div>
+                <div className='space-y-12'>
+                    <div>
+                        <h4 className='font-bold text-[var(--secondary-color)] mb-3'>Journal for</h4>
+                        <div className='space-y-2 flex flex-col text-dec'>
+                            <Link to="" className='
+                        text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2 '>Enterprise</Link>
+                            <Link to="" className='
+                        text-[var(--footer-color)] hover:underline decoration-yellow-500 decoration-2 '>Small Business</Link>
+                        </div>
+                    </div>
+                    <div>
+                        <Link to=""  className='flex items-center gap-1'><h3 className='font-bold flex items-center gap-1'>Looking for more? </h3><ArrowRight className='w-4 h-4' /></Link>
+                    </div>
                 </div>
             </div>
         </footer>

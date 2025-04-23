@@ -19,13 +19,13 @@ const Navbar = () => {
         {/* Hidden on all small screens  */}
         <div className='hidden md:flex items-center gap-5 pl-6'>
           <Link to="/about" className='hover:bg-[var(--shadow-color)] text-[var(--secondary-color)]  font-semibold p-1.5 rounded-md flex gap-2 items-center'>About
-          <ChevronDown className='w-3 h-3' /></Link>
+            <ChevronDown className='w-3 h-3' /></Link>
           <Link to="/templates" className='hover:bg-[var(--shadow-color)] text-[var(--secondary-color)]  font-semibold p-1.5 rounded-md flex gap-2 items-center'>Templates
-          <ChevronDown className='w-3 h-3' /></Link>
+            <ChevronDown className='w-3 h-3' /></Link>
           <Link to="/blog" className='hover:bg-[var(--shadow-color)] text-[var(--secondary-color)]  font-semibold p-1.5 rounded-md flex gap-2 items-center'>Blog
-          <ChevronDown className='w-3 h-3' /></Link>
+            <ChevronDown className='w-3 h-3' /></Link>
           <Link to="/pricing" className='hover:bg-[var(--shadow-color)] text-[var(--secondary-color)]  font-semibold p-1.5 rounded-md flex gap-2 items-center'>Pricing
-          <ChevronDown className='w-3 h-3' /></Link>
+          </Link>
         </div>
       </div>
 
@@ -42,13 +42,13 @@ const Navbar = () => {
       </button>
 
       {/* Mobile Menu */}
-      {isOpen &&(
+      {isOpen && (
         <div className='absolute top-16 right-0 w-50 bg-[var(--primary-color)] flex flex-col items-center gap-4 py-4 rounded-md shadow-md z-50 md:hidden'>
-        <Link to="/about" className='hover:bg-[var(--shadow-color)] text-[var(--secondary-color)]  font-semibold p-1.5 rounded-md '>About</Link>
-        <Link to="/templates" className='hover:bg-[var(--shadow-color)] text-[var(--secondary-color)]  font-semibold p-1.5 rounded-md '>Templates</Link>
-        <Link to="/blog" className='hover:bg-[var(--shadow-color)] text-[var(--secondary-color)]  font-semibold p-1.5 rounded-md '>Blog</Link>
-        <Link to="/pricing" className='hover:bg-[var(--shadow-color)] text-[var(--secondary-color)]  font-semibold p-1.5 rounded-md '>Pricing</Link>
-      </div>
+          <Link to="/about" className='hover:bg-[var(--shadow-color)] text-[var(--secondary-color)]  font-semibold p-1.5 rounded-md '>About</Link>
+          <Link to="/templates" className='hover:bg-[var(--shadow-color)] text-[var(--secondary-color)]  font-semibold p-1.5 rounded-md '>Templates</Link>
+          <Link to="/blog" className='hover:bg-[var(--shadow-color)] text-[var(--secondary-color)]  font-semibold p-1.5 rounded-md '>Blog</Link>
+          <Link to="/pricing" className='hover:bg-[var(--shadow-color)] text-[var(--secondary-color)]  font-semibold p-1.5 rounded-md '>Pricing</Link>
+        </div>
       )}
     </nav>
   )
