@@ -1,5 +1,7 @@
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram, faSquareFacebook, faLinkedin, faXTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
 
 
@@ -16,11 +18,11 @@ const Footer = () => {
                     </div>
 
                     <div className='flex gap-1 space-x-4 text-gray-600'>
-                        <Link to="/i" className='p-1 hover:bg-[var(--shadow-color)] rounded-md'>insta</Link>
-                        <Link to="/f" className='p-1 hover:bg-[var(--shadow-color)] rounded-md'>fb</Link>
-                        <Link to="/li" className='p-1 hover:bg-[var(--shadow-color)] rounded-md'>linkedin</Link>
-                        <Link to="/x" className='p-1 hover:bg-[var(--shadow-color)] rounded-md'>x</Link>
-                        <Link to="/g" className='p-1 hover:bg-[var(--shadow-color)] rounded-md'>gt</Link>
+                        <Link to="/i" className='hover:text-pink-700 rounded-md'><FontAwesomeIcon className='text-xl' icon={faInstagram} /></Link>
+                        <Link to="/f" className='hover:text-blue-700 rounded-md'><FontAwesomeIcon className='text-xl' icon={faSquareFacebook} /></Link>
+                        <Link to="/li" className='hover:text-blue-600 rounded-md'><FontAwesomeIcon className='text-xl' icon={faLinkedin} /></Link>
+                        <Link to="/x" className='hover:text-black rounded-md'><FontAwesomeIcon className='text-xl' icon={faXTwitter} /></Link>
+                        <Link to="/g" className='hover:text-purple-600 rounded-md'><FontAwesomeIcon className='text-xl' icon={faGithub} /></Link>
                     </div>
 
                     <div>
@@ -96,7 +98,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <Link to=""  className='flex items-center gap-1'><h3 className='font-bold flex items-center gap-1'>Looking for more? </h3><ArrowRight className='w-4 h-4' /></Link>
+                        <Link to="" className='flex items-center gap-1'><h3 className='font-bold flex items-center gap-1'>Looking for more? </h3><ArrowRight className='w-4 h-4' /></Link>
                     </div>
                 </div>
             </div>

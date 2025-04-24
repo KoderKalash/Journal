@@ -3,6 +3,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { AlignRight, X } from 'lucide-react';
 import { ChevronDown } from 'lucide-react';
+import { GoogleLogin } from '@react-oauth/google'
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false)
@@ -30,6 +31,9 @@ const Navbar = () => {
       </div>
 
       <div className="hidden md:flex justify-between gap-3">
+
+        {/* <GoogleLogin onSuccess={(credentialResponse) => {console.log(credentialResponse)}} onError={() => console.log("Login Failed")} /> */}
+
         <Link to="/login"><button className='text-[var(--secondary-color)] text-sm font-semibold px-4 py-2 rounded-md shadow-sm hover:bg-[var(--shadow-color)] transition cursor-pointer'>Login</button></Link>
         <div className='px-0.5 rounded-md bg-[var(--shadow-color)]'></div>
         <Link to="/signup"><button className='bg-[var(--secondary-color)] text-[var(--primary-color)] text-sm font-semibold px-4 py-2 rounded-md shadow-sm hover:opacity-90 transition cursor-pointer'>Sign Up</button></Link>
