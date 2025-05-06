@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useAuth0 } from "@auth0/auth0-react";
+
+
 
 const FeatureCard = ({ icon, title, desc }) => {
   return (
@@ -22,6 +25,7 @@ const TempCard = ({ icon, title, desc }) => {
 }
 
 const Landing = () => {
+  const { user, isAuthenticated, isLoading, loginWithRedirect, logout } = useAuth0();
   return (
     <div className='min-h-screen flex flex-col'>
       <section className='flex flex-col justify-center items-center px-4 py-12 border-[var(--shadow-color)]'>
@@ -29,8 +33,10 @@ const Landing = () => {
         <p className='font-semibold text-lg md:text-xl text-[var(--paragraph-color)]max-w-2xl mb-8'>Capture your thoughts, organize your goals, and build better habits — one entry at a time.</p>
 
         <div className='flex gap-2'>
-          <Link to="/signup" className='bg-[var(--secondary-color)] text-[var(--primary-color)] text-sm font-semibold px-4 py-4 rounded-md shadow-sm hover:opacity-90 transition cursor-pointer'><button>Get Started</button></Link>
-          <Link to="/login" className='bg-[var(--primary-color)] text-[var(--secondary-color)] text-sm font-semibold px-4 py-4 rounded-md shadow-sm hover:bg-[var(--shadow-color)] transition cursor-pointer'><button>Login</button></Link>
+          <Link className='bg-[var(--secondary-color)] text-[var(--primary-color)] text-sm font-semibold px-4 py-4 rounded-md shadow-sm hover:opacity-90 transition cursor-pointer'><button onClick={() => {
+            loginWithRedirect();
+          }}>Get Started</button></Link>
+          {/* <Link to="/login" className='bg-[var(--primary-color)] text-[var(--secondary-color)] text-sm font-semibold px-4 py-4 rounded-md shadow-sm hover:bg-[var(--shadow-color)] transition cursor-pointer'><button>Login</button></Link> */}
         </div>
       </section>
 
@@ -62,7 +68,7 @@ const Landing = () => {
         <div className='max-w-5xl mx-auto px-6'>
           <h2 className='font-bold text-2xl md:text-4xl text-[var(--secondary-color)] mb-4'>Try our templates.</h2>
           <div className='grid md:grid-cols-3 gap-8'>
-            <Link to="/myjournal"><TempCard
+            <Link to="/MyJournal"><TempCard
               icon="🗒️"
               title="My Journal"
               desc="A place for you and all your ideas in one place." /></Link>

@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const { user, isAuthenticated, isLoading, loginWithRedirect, logout } = useAuth0();
 
-  if (isLoading) return <div className="p-4">Loading...</div>;
+  // if (isLoading) return <div className="p-4">Loading...</div>;
 
   return (
     <nav className="flex justify-between items-center px-5 py-4 bg-[var(--primary-color)] text-[var(--secondary-color)] sticky top-0 w-full shadow-sm z-50">
@@ -49,6 +49,8 @@ const Navbar = () => {
           </div>
         )}
 
+        <div className="w-px h-6 bg-[var(--shadow-color)]" />
+
         {isAuthenticated ? (
           <button
             onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
@@ -65,13 +67,13 @@ const Navbar = () => {
           </button>
         )}
 
-        <div className="w-px h-6 bg-[var(--shadow-color)]" />
 
-        <Link to="/signup">
+
+        {/* <Link to="/signup">
           <button className="bg-[var(--secondary-color)] text-[var(--primary-color)] text-sm font-semibold px-4 py-2 rounded-md shadow-sm hover:opacity-90 transition duration-200">
             Sign Up
           </button>
-        </Link>
+        </Link> */}
       </div>
 
       {/* Hamburger Menu Icon */}
@@ -132,14 +134,14 @@ const Navbar = () => {
                 >
                   Log In
                 </button>
-                <Link to="/signup">
+                {/* <Link to="/signup">
                   <button
                     className="bg-[var(--secondary-color)] text-[var(--primary-color)] text-sm font-semibold px-4 py-2 rounded-md shadow-sm hover:opacity-90 transition"
                     onClick={() => setOpen(false)}
                   >
                     Sign Up
                   </button>
-                </Link>
+                </Link> */}
               </>
             )}
           </div>
