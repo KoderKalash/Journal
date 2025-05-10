@@ -73,7 +73,7 @@ const Landing = () => {
               title="My Journal"
               desc="A place for you and all your ideas in one place." /></Link>
 
-            <Link to="/todo"><TempCard
+            <Link to="/ToDo"><TempCard
               icon="✔️"
               title="To-do"
               desc="Stay on top of your tasks and never miss a deadline."
