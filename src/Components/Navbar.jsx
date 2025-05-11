@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="flex justify-between items-center px-5 py-4 bg-[var(--primary-color)] text-[var(--secondary-color)] sticky top-0 w-full shadow-sm z-50">
       {/* Left Section */}
       <div className="flex items-center gap-5">
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-centerz gap-2">
           <img src="/" alt="logo" className="w-6 h-6" />
           <h1 className="text-xl font-bold">Journal</h1>
         </Link>
