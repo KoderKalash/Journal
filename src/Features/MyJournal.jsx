@@ -30,8 +30,8 @@ const MyJournal = () => {
 
 
     return (
-        <div>
-            {/* <Featurebar /> */}
+        <div className='min-h-screen'>
+            <Featurebar />
             <div className='p-6 max-w-4xl mx-auto mt-10'>
                 {editing ? (
                     <input

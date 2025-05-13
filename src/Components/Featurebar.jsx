@@ -27,7 +27,7 @@ const Featurebar = () => {
   const [isOpen, setOpen] = useState(true);
 
   return (
-    <div className={`hidden md:flex fixed top-5 left-5 ${isOpen ?'w-60 h-[60vh]' : 'w-14 h-[8vh]'} bg-[var(--secondary-color)] text-[var(--primary-color)] flex-col rounded-xl p-4 shadow-xl transition-all duration-300`}>
+    <div className={`hidden md:flex fixed top-15 left-5 ${isOpen ?'w-60 h-[60vh]' : 'w-14 h-[8vh]'} bg-[var(--secondary-color)] text-[var(--primary-color)] flex-col rounded-xl p-4 shadow-xl transition-all duration-300`}>
       <div className="flex justify-end">
         <button onClick={() => setOpen(!isOpen)} className='cursor-pointer'>
           {isOpen ? <ArrowBigLeftDash /> : <ArrowBigRightDash />}
