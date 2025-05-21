@@ -11,12 +11,13 @@ import {
   ArrowBigRightDash,
   ArrowBigLeftDash,
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const menuItems = [
-  { icon: <Home className="w-5 h-5" />, label: 'Home' },
-  { icon: <NotebookText className="w-5 h-5" />, label: 'My Journal' },
-  { icon: <CheckSquare className="w-5 h-5" />, label: 'To-do' },
-  { icon: <CalendarCheck className="w-5 h-5" />, label: 'Habit Tracker' },
+  { icon: <Home className="w-5 h-5" />, label: 'Home',path: '/' },
+  { icon: <NotebookText className="w-5 h-5" />, label: 'My Journal', path: '/MyJournal' },
+  { icon: <CheckSquare className="w-5 h-5" />, label: 'To-do', path: '/ToDo' },
+  { icon: <CalendarCheck className="w-5 h-5" />, label: 'Habit Tracker'},
   { icon: <Map className="w-5 h-5" />, label: 'Roadmap' },
   { icon: <Calendar className="w-5 h-5" />, label: 'Calendar' },
   { icon: <Book className="w-5 h-5" />, label: 'Flashcards' },
@@ -25,6 +26,7 @@ const menuItems = [
 const Featurebar = () => {
   const { user, isAuthenticated } = useAuth0();
   const [isOpen, setOpen] = useState(true);
+  const navigate = useNavigate();
 
   return (
     <div className={`hidden md:flex fixed top-15 left-5 ${isOpen ?'w-60 h-[60vh]' : 'w-14 h-[8vh]'} bg-[var(--secondary-color)] text-[var(--primary-color)] flex-col rounded-xl p-4 shadow-xl transition-all duration-300`}>
@@ -48,6 +50,7 @@ const Featurebar = () => {
               <div
                 key={index}
                 className="flex items-center gap-3 px-4 py-2 hover:bg-[#2a2a2a] rounded-lg cursor-pointer transition duration-200"
+                onClick={() => navigate(item.path)}
               >
                 {item.icon}
                 <span className="text-sm">{item.label}</span>

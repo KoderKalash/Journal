@@ -79,7 +79,7 @@ const Landing = () => {
               desc="Stay on top of your tasks and never miss a deadline."
             /></Link>
 
-            <Link to="/habit"><TempCard
+            <Link to="/HabitTracker"><TempCard
               icon="🎌"
               title="Habit Tracker"
               desc="Track your progress and improve your habits."

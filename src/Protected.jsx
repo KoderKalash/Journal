@@ -5,7 +5,7 @@ import { Navigate } from 'react-router-dom';
 const Protected = ({ children }) => {
     const { isAuthenticated, isLoading } = useAuth0();
 
-    if (isLoading) return <div>Loading...</div>;
+    // if (isLoading) return <div>Loading...</div>;
     
     if (!isAuthenticated) return <Navigate to="/" />;
     

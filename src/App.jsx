@@ -7,6 +7,7 @@ import Signup from './pages/Signup';
 import MyJournal from './Features/MyJournal';
 import ToDo from './Features/ToDo';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import HabitTracker from './Features/HabitTracker';
 
 const App = () => {
   const location = useLocation();
@@ -18,6 +19,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/MyJournal" element={<Protected><MyJournal /></Protected>} />
+        <Route path="/ToDo" element={<Protected><ToDo /></Protected>} />
+        <Route path="/HabitTracker" element={<Protected><HabitTracker/></Protected>} />
+        <Route path="/ToDo" element={<Protected><ToDo /></Protected>} />
+        <Route path="/ToDo" element={<Protected><ToDo /></Protected>} />
         <Route path="/ToDo" element={<Protected><ToDo /></Protected>} />
       </Routes>
       {showNavbarFooter && <Footer />}
